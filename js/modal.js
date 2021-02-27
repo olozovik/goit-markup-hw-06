@@ -11,8 +11,8 @@
   function toggleModal() {
     refs.modal.classList.toggle('is-hidden');
 
-    const isModalClose = refs.closeModalBtn.classList.contains("is-hidden");
-    const method = isModalClose ? "anableBodyScroll" : "disableBodyScroll";
+    const isModalClose = refs.modal.classList.contains("is-hidden");
+    const method = isModalClose ? "enableBodyScroll" : "disableBodyScroll";
     bodyScrollLock[method](refs.modal);
   }
 })();
