@@ -600,6 +600,7 @@ body {
 
   background-color: var(--backdrop-color);
   opacity: 1;
+  pointer-events: initial;
 
   transition: opacity var(--duration) var(--timing-function),
     visibility var(--duration) var(--timing-function);
@@ -641,8 +642,7 @@ body {
   cursor: pointer;
 }
 
-.order-close:active,
-.order-close:focus {
+.order-close:active {
   outline: none;
 }
 
@@ -655,13 +655,13 @@ body {
   fill: var(--accent-color);
 }
 
-.is-hidden {
+.order-backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
 
-.is-hidden .order-modal {
+.order-backdrop.is-hidden .order-modal {
   transform: translate(-50%, -50%) scale(1.1);
 }
 
